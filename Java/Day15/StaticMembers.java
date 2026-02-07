@@ -1,5 +1,8 @@
 package  Day15;
-
+// Instance members belong to each object
+// Static members belongss to the class itself
+// Access with ClassName.member instead of object.member
+// Useful for counters, constants, or utility methods
 class Student {
     private String name;
     private static int studentCount = 0; // shared across all objects
