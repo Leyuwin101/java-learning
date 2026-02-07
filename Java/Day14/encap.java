@@ -1,4 +1,8 @@
 package Day14;
+// Fields should almost always be private
+// Access and Modification through the public method
+// You can validate data in setters
+// Protects your object from invalid states
 class Student {
     private String name;
     private int age;
