@@ -1,4 +1,8 @@
 package Day13;
+// Constructor name = class name
+// Run automatically when you use new
+// No return type (not even void)
+// this refers to the current object
 class Student {
     String name;
     int age;
