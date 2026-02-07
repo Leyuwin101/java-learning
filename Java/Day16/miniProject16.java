@@ -1,4 +1,5 @@
 package Day16;
+// Create Animal parent class with eat() method
 class Animal {
     String name;
     public static int AnimalCount = 0;
@@ -20,6 +21,8 @@ class Animal {
     }
 }
 
+// Create Dog and Cat Child Classes
+// Override eat() for each child
 class Dog extends Animal {
     private static int dogCount = 0; 
 
@@ -65,6 +68,7 @@ class Cat extends Animal {
 }
 public class miniProject16 {
     public static void main(String[] args) {
+        // Create Objects and call their methods
         Animal a1 = new Animal("Domestic Animal");
         a1.eat();
 

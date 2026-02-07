@@ -1,4 +1,9 @@
 package Day16;
+// Child class inherits all non-private members of parent
+// Child can override methods of parent
+// super keyword accesses parent constructor or methods
+// Use inheritance for an  "is-a" relationship
+
 // Parent Class
 
 class Vehicle {
