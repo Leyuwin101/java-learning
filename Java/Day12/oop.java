@@ -1,4 +1,6 @@
 package Day12;
+// Class = blueprint
+// Object = actual thing created from the blueprint
 class Student {
     String name;
     int age;
