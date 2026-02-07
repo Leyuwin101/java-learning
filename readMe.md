@@ -16,3 +16,4 @@
 - Day 13 = Constructor
 - Day 14 = Encapsulation (Getters and Setters)
 - Day 15 = Static Members ( Fields & Methods )
+- Day 16 = Inheritance
