@@ -1,5 +1,13 @@
 package activities;
 
+// 1. Create a class name ITAccount with these ATTRIBUTES, name, user, age, password AND APPLY encapulation
+// 2. In class declare 3 virtual methods
+// 2.1 void addUser(4 parameters)
+// 2.2 bool authenticate(2 parameters)
+// 2.3 void showInfo()
+// 3. Create a classe name ITManager, APPLY INHERITANCE AND POLYMORPHISM METHOD OVERRIDING
+// 4. in main class, implement the registration and login inputs and call the needed methods
+
 class ITAccount {
     private String name;
     private String username;
