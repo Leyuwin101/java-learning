@@ -9,24 +9,38 @@ class Shape {
 // Create Rectangle and Circle child classes
 // Override area() in each child
 class Rectangle extends Shape {
+    double width;
+    double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
     @Override
     public void area() {
-        System.out.println("Rectangle has an area of 1");
+        System.out.println(width * height);
     }
 }
 
 class Circle extends Shape {
+    double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
     @Override
     public void area() {
-        System.out.println("Circle has an area of 3.14");
+        System.out.println(Math.PI * radius * radius);
     }
 }
 public class miniProject17 {
     public static void main(String[] args) {
         // use parent reference to store child objects and print areas
         Shape s1 = new Shape();
-        Shape s2 = new Rectangle();
-        Shape s3 = new Circle();
+        Shape s2 = new Rectangle(5, 3);
+        Shape s3 = new Circle(1);
 
         s1.area();
         s2.area();
