@@ -32,7 +32,7 @@ class BankAccount {
             return false;
         }
         balance -= amount;
-        System.out.printf("Succesfully withdraw %.2f. New balance: %.2f", amount, balance);
+        System.out.printf("Successfully deposited %.2f. New balance: %.2f%n", amount, balance);
         return true;
     }
 
@@ -62,10 +62,12 @@ public class miniProject21 {
 
         BankAccount a1 = new BankAccount(100, 1001);
         a1.deposit(2000); // 100 + 2000
-        a1.getBalance(); // 2100
-        a1.withdraw(2000); // 2100 - 2000
-        a1.getBalance(); // 100
+        System.out.println(a1.getBalance()); // 2100
 
+        a1.withdraw(2000); // 2100 - 2000
+        System.out.println(a1.getBalance()); // 100\
+
+        // this also works
         Person p1 = new Person(1000, 1002, "Hajime", 18);
         p1.showPersonInfo();
     }
