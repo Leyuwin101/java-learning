@@ -18,3 +18,5 @@
 - Day 15 = Static Members ( Fields & Methods )
 - Day 16 = Inheritance
 - Day 17 = Polymorphism
+- Day 18 = Abstract
+- Day 19 = Interface
