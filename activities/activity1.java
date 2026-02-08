@@ -1,0 +1,86 @@
+package activities;
+
+class ITAccount {
+    private String name;
+    private String username;
+    private int age;
+    private String password;
+
+    public ITAccount() {}
+
+    public ITAccount(String name, String username, int age, String password) {
+        this.name = name;
+        this.username = username;
+        this.age = age;
+        this.password = password;
+    }
+
+    public String getName() { return name; }
+    public String getUsername() { return username; }
+    public int getAge() { return age; }
+    public String getPassword() { return password; }
+
+
+    public void addUser(String name, String username, int age, String password) {
+        this.name = name;
+        this.username = username;
+        this.age = age;
+        this.password = password;
+    }
+
+    public boolean authenticate(String inputUsername, String inputPassword) {
+        if (inputUsername == null || inputPassword == null || inputPassword.length() < 6)
+            return false;
+
+        return this.username.equals(inputUsername) && this.password.equals(inputPassword);
+    }
+
+    public void showInfo() {
+        System.out.println("==================================");
+        System.out.println("Name: " + getName());
+        System.out.println("Username: " + getUsername());
+        System.out.println("Age: " + getAge());
+        System.out.println("Password: " + getPassword());
+    }
+}
+
+class ITManager extends ITAccount {
+    String work;
+    
+    public ITManager (String name, String username, int age, String password, String work) {
+        super(name, username, age, password);
+        this.work = work;
+    }
+
+    @Override
+    public void showInfo() {
+        super.showInfo();
+        System.out.println("Work: " + work);
+    }
+}
+
+
+public class activity1 {
+    public static void main(String[] args) {
+        ITAccount a1 = new ITAccount("Seiju", "Seijuhajime", 18, "SeijuKo");
+        ITAccount a2 = new ITManager("Hajime", "HajimeBato", 28, "HAHA", "Manager");
+        ITAccount a3 = new ITAccount();
+        a3.addUser("Kenshin", "KenshinHimura", 30, "KenshinPogi");
+
+        a1.showInfo();
+        a2.showInfo();
+        a3.showInfo();
+
+        if (a1.authenticate("Seijuhajime", "SeijuKo")) {
+            System.out.println("Login Succesful");
+        } else {
+            System.out.println("Login Failed");
+        }
+
+        if (a2.authenticate("HajimeBato", "HAHA")) {
+            System.out.println("Login Succesful");
+        } else {
+            System.out.println("Login Failed");
+        }
+    }
+}
