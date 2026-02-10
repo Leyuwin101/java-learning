@@ -1,6 +1,10 @@
 package Day25;
 import java.util.Scanner;
 
+// Create enum OrderStatus
+// Values: PENDING, SHIPPED, DELIVERED, CANCELLED
+// Print a message based on status
+
 enum ShippedStatus {
     Pending, Shipped, Delivered, Cancelled
 }
