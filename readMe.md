@@ -25,3 +25,4 @@
 - Day 22 = 'This' keyword
 - Day 23 = 'super' keyword
 - Day 24 = Nested Class ( Inner Class )
+- Day 25 = Enum
