@@ -24,3 +24,4 @@
 - Day 21 = Access Modifiers(Public, Protected, Private, Default)
 - Day 22 = 'This' keyword
 - Day 23 = 'super' keyword
+- Day 24 = Nested Class ( Inner Class )
