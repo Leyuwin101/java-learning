@@ -1,5 +1,8 @@
 package mini;
-
+/**
+ * Keep this code to compare how much i improve in java
+ * this code has so many bugs 
+ */
 import java.util.ArrayList;
 import java.util.Scanner;
 
