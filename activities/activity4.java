@@ -305,8 +305,9 @@ public class activity4 {
                 System.out.println(">> 2. Add product to cart");
                 System.out.println(">> 3. Remove product from cart");
                 System.out.println(">> 4. Apply discount (Electronics/Clothing only)");
-                System.out.println(">> 5. Checkout");
-                System.out.println(">> 6. Exit");
+                System.out.println(">> 5. View Product Info");
+                System.out.println(">> 6. Checkout");
+                System.out.println(">> 7. Exit");
                 System.out.print("Enter a choice here: ");
 
                 int choice = sc.nextInt();
@@ -363,9 +364,25 @@ public class activity4 {
                             }
                             break;
                     case 5:
+                            if (items.isEmpty()) {
+                                System.out.println("No products added yet!");
+                            } else {
+                                System.out.print("Enter product number to view info: ");
+                                int viewIndex = sc.nextInt() - 1;
+
+                                if ( viewIndex >= 0 && viewIndex < items.size()) {
+                                    ShopProduct view = items.get(viewIndex);
+                                    view.displayInfo();
+                                } else {
+                                    System.out.println("Invalid product number");
+                                }
+                            }
+                            break;
+
+                    case 6:
                             order.checkout(cart);
                             break;
-                    case 6:
+                    case 7:
                             shopping = false;
                             System.out.println("Exiting. Thank you!");
                             break;
