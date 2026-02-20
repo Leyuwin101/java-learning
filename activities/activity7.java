@@ -1,4 +1,8 @@
 package activities;
+
+// =================================================================
+// SIMPLE ACTIVITY TO TRAIN MY SKILL
+// =================================================================
 import java.util.List;
 import java.util.ArrayList;
 
