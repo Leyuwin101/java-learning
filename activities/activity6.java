@@ -68,7 +68,6 @@ class SoftwareDeveloper extends Employee {
     }
 }
 
-
 class DevOps extends Employee {
 
     // Empty Constructor
@@ -101,7 +100,7 @@ class TechCompany {
             System.out.println("Employee #" + ( i + 1));
             emp.get(i).displayInfo();
             System.out.println("--------------------------------------------------------------------------------");
-        }
+        }   
     }
 }
 
