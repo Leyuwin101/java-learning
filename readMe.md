@@ -32,3 +32,7 @@
 - Day 29 = Deep dive in array
 - Day 30 = 2d Array & 3d Array
 - Day 31 = Command Line Arguments
+- Day 32 = Recursion 
+- Day 33 = Method Reference
+- Day 34 = Lambda Expression
+- Day 35 = Function Interface
