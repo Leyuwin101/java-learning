@@ -36,3 +36,5 @@
 - Day 33 = Method Reference
 - Day 34 = Lambda Expression
 - Day 35 = Function Interface
+- Day 36 = Collections: List
+- Day 37 = Collections: Set
