@@ -32,52 +32,42 @@ public class miniProject37 {
     public static void main(String[] args) {
         // HashSet uses hashCode()/equals() to detect duplicates, no order guaranteed.
         // TreeSet uses compareTo() to sort and detect duplicates, so your objects need to implement
-        // Create a Set<Color> of colors
-        Set<Color> setColors = new HashSet<>();
-
-        setColors.add(new Color("Red"));
-        setColors.add(new Color("Blue"));
-        setColors.add(new Color("Yellow"));
-        // Try adding duplicates and see what happens
-        setColors.add(new Color("Red"));
-
-        System.out.println("Set: " + setColors);
-
-
-        Set<Color> linkedColors = new LinkedHashSet<>();
-        linkedColors.add(new Color("Red"));
-        linkedColors.add(new Color("Blue"));
-        linkedColors.add(new Color("Yellow"));
-        linkedColors.add(new Color("Red")); // ignored
-
-        System.out.println("LinkedHashSet: " + linkedColors);
-
-        // Use a TreeSet to sort the elements
-        TreeSet<Color> treesetColors = new TreeSet<>();
-
-        treesetColors.add(new Color("Purple"));
-        treesetColors.add(new Color("Black"));
-
-        System.out.println("TreeSet: " + treesetColors);
-
-        // Check if a specific element exists
-        if (setColors.contains(new Color("Red"))) {
-            System.out.println("Set Colors contains Red ");
-        } else {
-            System.out.println("Set Colors doesn't contain that color");
-        }
-
-        if (linkedColors.contains(new Color("Black"))) {
-            System.out.println("Linked colors contains Black");
-        } else {
-            System.out.println("Linked Colors doesn't contain that color");
-        }
-        if (treesetColors.contains(new Color("Red"))) {
-            System.out.println("Kulay contains Red");
-        } else {
-            System.out.println("Treeset Colors doesn't contain that color");
-        }
         
+        // ===================== HashSet =====================
+        Set<Color> hashSetColors = new HashSet<>();
+        hashSetColors.add(new Color("Red"));
+        hashSetColors.add(new Color("Blue"));
+        hashSetColors.add(new Color("Yellow"));
+        hashSetColors.add(new Color("Green"));
+        hashSetColors.add(new Color("Red"));   // duplicate
+
+        System.out.println("HashSet (no duplicates, unordered): " + hashSetColors);
+
+        // ===================== LinkedHashSet =====================
+        Set<Color> linkedHashSetColors = new LinkedHashSet<>();
+        linkedHashSetColors.add(new Color("Red"));
+        linkedHashSetColors.add(new Color("Blue"));
+        linkedHashSetColors.add(new Color("Yellow"));
+        linkedHashSetColors.add(new Color("Green"));
+        linkedHashSetColors.add(new Color("Red")); // duplicate ignored
+
+        System.out.println("LinkedHashSet (insertion order): " + linkedHashSetColors);
+
+        // ===================== TreeSet =====================
+        TreeSet<Color> treeSetColors = new TreeSet<>();
+        treeSetColors.add(new Color("Purple"));
+        treeSetColors.add(new Color("Black"));
+        treeSetColors.add(new Color("Green"));
+        treeSetColors.add(new Color("Blue"));
+        treeSetColors.add(new Color("Purple")); // duplicate ignored
+
+        System.out.println("TreeSet (sorted order): " + treeSetColors);
+
+        // ===================== contains() checks =====================
+        System.out.println("\n--- Contains Checks ---");
+        System.out.println("HashSet contains Red? " + hashSetColors.contains(new Color("Red")));
+        System.out.println("LinkedHashSet contains Black? " + linkedHashSetColors.contains(new Color("Black")));
+        System.out.println("TreeSet contains Red? " + treeSetColors.contains(new Color("Red")));
 
     }
     
