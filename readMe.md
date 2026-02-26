@@ -38,3 +38,6 @@
 - Day 35 = Function Interface
 - Day 36 = Collections: List
 - Day 37 = Collections: Set
+- Day 38 = Collections: Map
+
+
