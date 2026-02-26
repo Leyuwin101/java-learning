@@ -261,8 +261,6 @@ class SmartHome {
 }
 
 
-
-
 public class activity8 {
     public static void main(String[] args) {
         
