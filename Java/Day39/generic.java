@@ -16,6 +16,13 @@ class Pair<K,V> {
 }
 public class generic {
     public static void main(String[] args) {
+
+        // Common letters:
+
+        // T → Type
+        // E → Element (collections)
+        // K → Key (Map)
+        // V → Value (Map)
         
         Pair<String, Integer> student = new Pair<>("Alice", 90);
         Pair<String, String> country = new Pair("PG", "Philippines");
