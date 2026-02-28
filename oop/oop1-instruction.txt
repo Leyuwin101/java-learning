@@ -1,0 +1,62 @@
+Objective:
+
+Create a Java program that manages a music library where you can add, remove, view, and play songs. Then, extend it with extra features to practice object-oriented programming, collections, and user interaction.
+
+Part 1: Basic Setup
+
+Create a Song class with the following fields:
+
+title (String)
+
+artist (String)
+
+album (String)
+Include a constructor, getters, and a displaySong() method that returns a readable string.
+
+Create a MusicLibrary class with:
+
+An ArrayList<Song> to store songs.
+
+Methods to:
+
+addSong(Song song)
+
+removeSong(Song song)
+
+playRandomSong() (prints a random song from the library)
+
+Test your program by adding 3 songs, removing one, and playing a random song.
+
+Part 2: Make It Interactive
+
+Add a menu that allows the user to:
+
+Add a song
+
+Remove a song
+
+View all songs
+
+Play a random song
+
+Exit
+
+Use Scanner to read input from the user.
+
+Loop the menu until the user chooses to exit.
+
+Deliverables
+
+A Java program that runs in the console.
+
+Demonstrates:
+
+Object-oriented design (Song class)
+
+Collections (ArrayList)
+
+Randomization (Random)
+
+User input (Scanner)
+
+Menu loops and conditional logic
