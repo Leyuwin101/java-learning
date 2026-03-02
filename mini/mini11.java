@@ -26,14 +26,19 @@ public class mini11 {
                     case "+" -> num1 + num2;
                     case "-" -> num1 - num2;
                     case "x" -> num1 * num2;
-                    case "/" -> num2 == 0 ? 0 : num1 / num2;
+                    case "/" -> {
+                        if ( num2 == 0) {
+                            throw new ArithmeticException("Cannot be divide to zero");
+                        }
+                        yield num1 / num2;
+                    }
                     default -> throw new IllegalArgumentException("Invalid operation " + ope);
                 };
 
                 System.out.println("The result is: " + choice );
 
-            } catch (InputMismatchException e) {
-                System.out.println("Input is not a number");
+            } catch (ArithmeticException e) {
+                System.out.println(e.getMessage());
             }
 
             System.out.println("Do you want to calculate again? (yes/no)");
