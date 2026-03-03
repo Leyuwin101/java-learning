@@ -41,4 +41,7 @@
 - Day 38 = Collections: Map
 - Day 39 = Generics
 - Day 40 = Streams API
-
+- Day 41 = Optional Class
+- Day 42 = Date & Time API
+- Day 43 = Formatting Output
+- Day 44 = Regular Expression (REGEX)
