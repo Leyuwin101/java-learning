@@ -46,3 +46,5 @@
 - Day 43 = Formatting Output
 - Day 44 = Regular Expression (REGEX)
 - Day 45 = File I/O
+- Day 46 = Serialization
+- Day 47 = Deserialization
