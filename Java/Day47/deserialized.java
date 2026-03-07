@@ -1,14 +1,15 @@
 package Day47;
 
+import Day46.Student;
 import java.io.FileInputStream;
-import java.io.ObjectInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 
 public class deserialized {
     public static void main(String[] args) {
         // Converting a byte stream back into an object that was previously serialized.
 
-        // Connected to the Day 46 
+        // Connected to the Day 46 Student Class
 
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("Student.ser"))) {
             Student s = (Student) in.readObject();
