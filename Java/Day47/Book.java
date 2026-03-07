@@ -13,4 +13,9 @@ public class Book implements Serializable{
         this.author = author;
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return title + " by " + author + " - $" + price; 
+    }
 }

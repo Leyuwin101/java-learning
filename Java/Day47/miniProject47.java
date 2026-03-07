@@ -1,33 +1,20 @@
 package Day47;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-
 public class miniProject47 {
     public static void main(String[] args) {
-        // Serialized first
-        Book b = new Book("Harry Potter", "J.K Rowlings", 10.00);
 
-        try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("book.ser"))) {
-            out.writeObject(b);
+        Library library = new Library();
+        library.addBook(new Book("Harry Potter", "J.K Rowlings", 10.00));
+        library.addBook(new Book("The Hobbit", "J.R.R Tolkien", 15.00));
+        library.addBook(new Book("1984", "George Orwell", 12.55));
 
-            System.out.println("Object saved! ");
+        // Save Library
+        library.saveLibrary("Library.ser");
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // Load Library
+        Library loadedLibrary = Library.loadLibrary("Library.ser");
+        System.out.println("\nBooks in Library");
+        loadedLibrary.showBooks();
 
-        // Deserialized
-        try(ObjectInputStream in = new ObjectInputStream(new FileInputStream("book.ser"))) {
-            Book bs = (Book) in.readObject();
-            System.out.println("Title: " + bs.title);
-            System.out.println("Author: " + bs.author);
-            System.out.println("Price: " + bs.price);
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 }
