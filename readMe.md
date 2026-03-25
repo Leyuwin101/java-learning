@@ -48,3 +48,7 @@
 - Day 45 = File I/O
 - Day 46 = Serialization
 - Day 47 = Deserialization
+- Day 48 = Thread Basics
+- Day 49 = Runnable and Thread Class
+- Day 50 = Synchronization
+
