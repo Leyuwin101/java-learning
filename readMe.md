@@ -53,3 +53,4 @@
 - Day 50 = Synchronization
 - Day 51 = Exception Hierarchy 
 - Day 52 = Custom Exception
+- Day 53 = Annotations
