@@ -1,3 +1,0 @@
-Hello this is my first file!
-Java File I/O Day 45
-auto closed file
