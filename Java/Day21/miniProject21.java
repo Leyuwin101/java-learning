@@ -41,11 +41,11 @@ class BankAccount {
     }
 }
 
-class Person extends BankAccount {
+class Persons extends BankAccount {
     public String name;
     public int age;
 
-    public Person(double balance, int accountNumber, String name, int age) {
+    public Persons(double balance, int accountNumber, String name, int age) {
         super(balance, accountNumber);
         this.name = name;
         this.age = age;
@@ -68,7 +68,7 @@ public class miniProject21 {
         System.out.println(a1.getBalance()); // 100\
 
         // this also works
-        Person p1 = new Person(1000, 1002, "Hajime", 18);
+        Persons p1 = new Persons(1000, 1002, "Hajime", 18);
         p1.showPersonInfo();
     }
 }
