@@ -1,4 +1,6 @@
-### JAVA 100 - DAY CHALLENGE ( ZERO TO HERO )
+# 🎇 JAVA 100-DAY CHALLENGE 🚀
+### From ZERO to HERO in 100 Days
+
 
 ## Daily Learning
 - Day 1 = Hello world!
