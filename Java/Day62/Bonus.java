@@ -1,4 +1,5 @@
 package Day62;
 
-public interface Bonus {
+interface Bonus {
+    double calculateBonus(double salary);
 }
