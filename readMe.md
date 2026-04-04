@@ -60,3 +60,5 @@
 - Day 55 = Math Class Methods
 - Day 56 = Number Formatting
 - Day 57 = Type Conversion
+- Day 58 = Bitwise Operators
+- Day 59 = Command-Line Programs
