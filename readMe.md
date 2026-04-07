@@ -64,4 +64,4 @@
 - Day 59 = Command-Line Programs
 - Day 60 = Command-Line Programs Advance
 - Day 61 = Mini Project 1 (Lessons 1 - 10)
-- Day 62 = Mini Project 2 (Lessons 2 - 10)
+- Day 62 = Mini Project 2 (Lessons 2 - 20)
