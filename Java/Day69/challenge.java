@@ -16,17 +16,15 @@ public class challenge {
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
         container.setBackground(Color.WHITE);
 
-        container.add(new CardPanel("Seiju", "Java Developer", "/Photo1.jpg"));
-        container.add(new CardPanel("Majo", "Backend Dev", "/Photo2.jpg"));
-        container.add(new CardPanel("Jaegyeon", "UI Developer", "/Photo3.jpg"));
+        container.add(new CardPanel("Seiju", "Java Developer", "Java/Day69/Photo1.jpg"));
+        container.add(new CardPanel("Majo", "Backend Dev", "Java/Day69/Photo2.jpg"));
+        container.add(new CardPanel("Jaegyeon", "UI Developer", "Java/Day69/Photo3.jpg"));
 
         JScrollPane scroll = new JScrollPane(container);
         scroll.setBorder(null);
 
         frame.add(scroll);
         frame.setVisible(true);
-
-
     }
 }
 
