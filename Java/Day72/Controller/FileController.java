@@ -6,7 +6,7 @@ import Day72.model.Student;
 
 public class FileController {
     private static final String FILE_NAME = System.getProperty("user.home") +
-            "\\OneDrive\\Desktop\\LearnJava\\Java\\Day71\\students.txt";
+            "\\OneDrive\\Desktop\\LearnJava\\Java\\Day72\\students.txt";
 
     /// Save file
     public void save(ArrayList<Student> students) {

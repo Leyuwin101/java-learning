@@ -51,6 +51,11 @@ public class DashboardView extends JFrame {
     public JPanel searchPanel;
     public JPanel updatePanel;
 
+    /// Progress Bar
+    public JLabel statusLabel = new JLabel("Ready");
+    public JProgressBar progressBar = new JProgressBar(0, 100);
+    public Timer loadingTimer;
+
     public DashboardView() {
         setTitle("Student Dashboard");
         setSize(700, 500);
@@ -141,8 +146,23 @@ public class DashboardView extends JFrame {
         tablePanel.setBackground(bg);
         tablePanel.add(scroll, BorderLayout.CENTER);
 
+
+        /// Progress bar
+        progressBar.setStringPainted(true);
+        progressBar.setValue(0);
+        progressBar.setForeground(accent);
+        progressBar.setBackground(Panel);
+
+        statusLabel.setForeground(text);
+
+        JPanel bottom = new JPanel(new BorderLayout());
+        bottom.setBackground(bg);
+        bottom.add(statusLabel, BorderLayout.WEST);
+        bottom.add(progressBar, BorderLayout.CENTER);
+
         panel.add(form, BorderLayout.NORTH);
         panel.add(tablePanel, BorderLayout.CENTER);
+        panel.add(bottom, BorderLayout.SOUTH);
 
         return panel;
     }

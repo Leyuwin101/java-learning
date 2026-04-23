@@ -7,6 +7,7 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DashboardController {
     private DashboardView view;
@@ -63,27 +64,85 @@ public class DashboardController {
             return;
         }
 
-
+        int age;
         try {
-            int age = Integer.parseInt(ageText);
+            age = Integer.parseInt(ageText);
 
             if (age < 0 || age > 60) {
                 JOptionPane.showMessageDialog(view, "Age must be between 0 and 60");
                 return;
             }
 
-            students.add(new Student(name, section, age));
-
-            refreshTable();
-            fileController.save(students);
-
-            view.name.setText("");
-            view.section.setText("");
-            view.age.setText("");
-
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(view, "Invalid age");
+            return;
         }
+
+        /// disable the button during the loading
+        view.addBtn.setEnabled(false);
+        view.progressBar.setValue(0);
+        view.statusLabel.setText("Starting...");
+
+        /// Loading animation (dots)
+        view.loadingTimer = new Timer(300, e -> {
+            String text = view.statusLabel.getText();
+
+            if (!text.startsWith("Loading")) { text = "Loading"; }
+            if (text.endsWith("...")) {
+                view.statusLabel.setText("Loading");
+            } else {
+                view.statusLabel.setText(text + ".");
+            }
+        });
+        view.loadingTimer.start();
+
+        /// doInBackground()
+        /// Runs in separate thread
+        /// Heavy work goes here
+        /// done()
+        /// Runs back on UI thread
+        /// Safe to update GUI
+
+        SwingWorker<Void, Integer>  worker = new SwingWorker<>() {
+            @Override
+            protected Void doInBackground() throws Exception {
+
+                for (int i = 0; i <= 100; i += 10) {
+                    Thread.sleep(150);
+                    publish(i); // send progress to process
+                }
+                return null;
+            }
+
+            @Override
+            protected void process(List<Integer> chunks) {
+                int latest = chunks.get(chunks.size() - 1);
+                view.progressBar.setValue(latest);
+            }
+
+            @Override
+            protected void done() {
+
+                view.loadingTimer.stop();
+
+                students.add(new Student(name, section, age));
+
+                refreshTable();
+                fileController.save(students);
+
+                view.name.setText("");
+                view.section.setText("");
+                view.age.setText("");
+
+                view.progressBar.setValue(100);
+                view.addBtn.setEnabled(true);
+                view.statusLabel.setText("Done");
+                JOptionPane.showMessageDialog(view, "Student added");
+            }
+        };
+
+        worker.execute();
+
     }
 
     /// Search Filter
