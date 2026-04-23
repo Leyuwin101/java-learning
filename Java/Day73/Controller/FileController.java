@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class FileController {
     private static final String FILE_NAME = System.getProperty("user.home") +
-            "\\OneDrive\\Desktop\\LearnJava\\Java\\Day72\\students.txt";
+            "\\OneDrive\\Desktop\\LearnJava\\Java\\Day73\\students.txt";
 
     /// Save file
     public void save(ArrayList<Student> students) {
