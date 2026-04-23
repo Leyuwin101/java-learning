@@ -1,7 +1,7 @@
-package Day72.Controller;
+package Day73.Controller;
 
-import Day72.view.DashboardView;
-import Day72.view.LoginView;
+import Day73.view.DashboardView;
+import Day73.view.LoginView;
 
 import javax.swing.*;
 

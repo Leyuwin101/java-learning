@@ -1,4 +1,4 @@
-package Day72.view;
+package Day73.view;
 
 import javax.swing.*;
 import java.awt.*;

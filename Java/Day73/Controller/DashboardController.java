@@ -1,7 +1,8 @@
-package Day72.Controller;
+package Day73.Controller;
 
-import Day72.view.DashboardView;
-import Day72.model.Student;
+import Day73.Component.StudentCard;
+import Day73.model.Student;
+import Day73.view.DashboardView;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -22,6 +23,7 @@ public class DashboardController {
         /// load date from file
         students = fileController.load();
         refreshTable();
+        refreshCard();
 
         view.addBtn.addActionListener(e -> addStudent());
         view.saveBtn.addActionListener(e -> saveUpdate());
@@ -34,6 +36,7 @@ public class DashboardController {
             view.sorter.setRowFilter(null);
         });
         view.updateDelete.addActionListener(e -> view.cardLayout.show(view.mainPanel, "UPDATE") );
+        view.viewCards.addActionListener(e -> view.cardLayout.show(view.mainPanel, "CARDS"));
         view.exit.addActionListener(e -> System.exit(0));
 
 
@@ -87,7 +90,9 @@ public class DashboardController {
         view.loadingTimer = new Timer(300, e -> {
             String text = view.statusLabel.getText();
 
-            if (!text.startsWith("Loading")) { text = "Loading"; }
+            if (!text.startsWith("Loading")) {
+                text = "Loading";
+            }
             if (text.endsWith("...")) {
                 view.statusLabel.setText("Loading");
             } else {
@@ -128,6 +133,7 @@ public class DashboardController {
                 students.add(new Student(name, section, age));
 
                 refreshTable();
+                refreshCard();
                 fileController.save(students);
 
                 view.name.setText("");
@@ -138,6 +144,8 @@ public class DashboardController {
                 view.addBtn.setEnabled(true);
                 view.statusLabel.setText("Done");
                 JOptionPane.showMessageDialog(view, "Student added");
+
+
             }
         };
 
@@ -185,6 +193,7 @@ public class DashboardController {
             selectedStudent.setAge(Integer.parseInt(view.editAge.getText()));
 
             refreshTable();
+            refreshCard();
             fileController.save(students);
 
             selectedStudent = null;
@@ -207,6 +216,7 @@ public class DashboardController {
         selectedStudent = null;
 
         refreshTable();
+        refreshCard();
         fileController.save(students);
 
     }
@@ -222,5 +232,20 @@ public class DashboardController {
                     s.getAge()
             });
         }
+    }
+
+    public void refreshCard() {
+        view.cardPanel.removeAll();
+
+        for (Student s: students) {
+            view.cardPanel.add(new StudentCard(
+                    s.getName(),
+                    s.getSection(),
+                    s.getAge()
+            ));
+        }
+
+        view.cardPanel.revalidate();
+        view.cardPanel.repaint();
     }
 }

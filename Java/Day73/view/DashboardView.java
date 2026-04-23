@@ -1,4 +1,4 @@
-package Day72.view;
+package Day73.view;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -31,6 +31,7 @@ public class DashboardView extends JFrame {
     public JMenuItem addStudent = new JMenuItem("Add Student");
     public JMenuItem searchStudent = new JMenuItem("Search Student");
     public JMenuItem updateDelete = new JMenuItem("Update/Delete");
+    public JMenuItem viewCards = new JMenuItem("View Cards");
     public JMenuItem exit = new JMenuItem("Exit");
 
     /// Table
@@ -56,6 +57,10 @@ public class DashboardView extends JFrame {
     public JProgressBar progressBar = new JProgressBar(0, 100);
     public Timer loadingTimer;
 
+    /// Cards
+    public JPanel cardPanel;
+    public JScrollPane cardScroll;
+
     public DashboardView() {
         setTitle("Student Dashboard");
         setSize(700, 500);
@@ -76,10 +81,22 @@ public class DashboardView extends JFrame {
         /// Update/Delete page
         updatePanel = getUpdatePanel();
 
+        /// Card panel
+        cardPanel = new JPanel(new GridLayout(0, 3, 15, 15));
+        // 0 rows = auto rows
+        // 3 columns = EXACTLY 3 per row
+        // 15 spacing
+        cardPanel.setBackground(bg);
+
+        cardScroll = new JScrollPane(cardPanel);
+        cardScroll.getViewport().setBackground(bg);
+        cardScroll.setBackground(bg);
+
         mainPanel.setBackground(bg);
         mainPanel.add(addPanel, "ADD");
         mainPanel.add(searchPanel, "VIEW");
         mainPanel.add(updatePanel, "UPDATE");
+        mainPanel.add(cardScroll, "CARDS");
 
         add(mainPanel);
 
@@ -288,12 +305,14 @@ public class DashboardView extends JFrame {
         styleMenuItem(addStudent);
         styleMenuItem(searchStudent);
         styleMenuItem(updateDelete);
+        styleMenuItem(viewCards);
         styleMenuItem(exit);
 
         /// Add items to menu
         fileMenu.add(addStudent);
         fileMenu.add(searchStudent);
         fileMenu.add(updateDelete);
+        fileMenu.add(viewCards);
         fileMenu.addSeparator();
         fileMenu.add(exit);
 

@@ -1,4 +1,4 @@
-package Day72.model;
+package Day73.model;
 
 public class Student {
     private String name;

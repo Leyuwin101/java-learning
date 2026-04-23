@@ -1,7 +1,7 @@
-package Day72;
+package Day73;
 
-import Day72.Controller.LoginController;
-import Day72.view.LoginView;
+import Day73.Controller.LoginController;
+import Day73.view.LoginView;
 
 public class Main {
     public static void main(String[] args) {

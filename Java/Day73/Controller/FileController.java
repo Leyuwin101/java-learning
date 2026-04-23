@@ -1,8 +1,9 @@
-package Day72.Controller;
+package Day73.Controller;
+
+import Day73.model.Student;
 
 import java.io.*;
 import java.util.ArrayList;
-import Day72.model.Student;
 
 public class FileController {
     private static final String FILE_NAME = System.getProperty("user.home") +
