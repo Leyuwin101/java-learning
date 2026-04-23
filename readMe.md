@@ -64,4 +64,15 @@
 - Day 59 = Command-Line Programs
 - Day 60 = Command-Line Programs Advance
 - Day 61 = Mini Project 1 (Lessons 1 - 10)
-- Day 62 = Mini Project 2 (Lessons 2 - 20)
+- Day 62 = Mini Project 2 (Lessons 11 - 20)
+- Day 63 = Mini Project 3 (Lessons 21 - 30)
+- Day 64 = Mini Project 4 (Lessons 31 - 40)
+- Day 65 = Mini Project 5 (Lessons 41 - 50)
+- Day 66 = GUI basics: Java Swing with event handling
+- Day 67 = Layout Managers
+- Day 68 = Menu & Dialogs
+- Day 69 = Images & Graphics
+- Day 70 = Advanced GUI components
+- Day 71 = MVC (Model, View, Controller) pattern
+- Day 72 = Threaded GUI with the copy of Day 71 (The only changes is The DashboardView, DashboardController)
+- Day 73 = Custom components with the copy of Day 73
