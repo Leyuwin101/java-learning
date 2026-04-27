@@ -76,3 +76,5 @@
 - Day 71 = MVC (Model, View, Controller) pattern
 - Day 72 = Threaded GUI with the copy of Day 71 (The only changes is The DashboardView, DashboardController)
 - Day 73 = Custom components with the copy of Day 73
+- Day 74 = Final GUI Project (Expense tracker system)
+- Day 75 = Network basics
