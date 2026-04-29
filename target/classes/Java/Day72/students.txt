@@ -1,0 +1,6 @@
+Seiju,BC2MA,19
+Hajime,BC2MA,19
+Ken,BC2MA,19
+Leeuwin,BC2MA,19
+JP,BC3MA,18
+Harvey,BD1BA,20

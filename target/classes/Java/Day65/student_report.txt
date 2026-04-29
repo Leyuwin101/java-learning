@@ -1,0 +1,7 @@
+===== STUDENT REPORT ====
+Seiju | 101 | 85.6
+Kenji | 102 | 74.0
+Kenshin | 103 | 98.6
+
+Average: 86.06666666666666
+Pass Rate: 66.66666666666667%
