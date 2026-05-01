@@ -81,3 +81,5 @@
 - Day 76 = TCP / UDP (Socket Communication)
 - Day 77 = Multi-Client TCP System
 - Day 78 = Chat Features Layer
+- Day 79 = HTTP Request
+- Day 80 = Multithreading
