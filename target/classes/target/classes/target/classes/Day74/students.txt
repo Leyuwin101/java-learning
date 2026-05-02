@@ -1,0 +1,8 @@
+Seiju|Food|100000.0||2026-04-23
+Seiju|Food|10000.0|1_20250105_100322_0000.jpg|2026-04-23
+Seiju|Food|2000.0|wallpaper.jpeg|2026-04-23
+Seiju|Transport|1000.0|Screenshot 2025-09-18 140810.png|2026-04-23
+Seiju|Food|1000.0|IMG_20250820_221511_133.jpg|2026-04-25
+Majo|Transport|1000.0|IMG_20250820_221504_730.jpg|2026-04-25
+Seiju|Bills|1000.0||2026-04-25
+Seiju|Entertainment|1000.0||2026-04-25
