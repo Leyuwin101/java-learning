@@ -1,0 +1,3 @@
+Seiju,BC2MA,19
+Hajime,BC2MA,19
+Ken,BC2MA,19
